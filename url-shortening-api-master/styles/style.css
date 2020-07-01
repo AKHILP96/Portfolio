@@ -1,0 +1,313 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #9e9aa7;
+}
+
+ul {
+  list-style: none;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header {
+  width: 100vw;
+}
+
+button {
+  border: none;
+  background-color: #2acfcf;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+nav {
+  width: 80%;
+  margin: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 10vh;
+  padding: 2rem 0rem;
+}
+
+nav .left {
+  width: 50%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav .right {
+  width: 20%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav a {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+nav a:hover {
+  color: #2d2442;
+}
+
+.hero {
+  width: 80%;
+  margin: auto;
+  min-height: 90vh;
+}
+
+.hero img {
+  width: 150%;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  line-height: 5rem;
+}
+
+.hero p {
+  padding-bottom: 2rem;
+}
+
+.shorten-form {
+  min-width: 100vw;
+  min-height: 10vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, white), color-stop(50%, #eff1f7));
+  background-image: linear-gradient(to bottom, white 50%, #eff1f7 50%);
+}
+
+.shorten-form .wrapper {
+  width: 80%;
+  margin: auto;
+  background-color: #232127;
+}
+
+.shorten-form .wrapper form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: auto;
+  width: 90%;
+}
+
+.shorten-form .wrapper form input {
+  width: 70%;
+}
+
+.stats {
+  min-height: 90vh;
+  min-width: 100vw;
+  background-color: #eff1f7;
+}
+
+.stats .stats-header {
+  min-height: 30vh;
+  width: 80%;
+  text-align: center;
+  margin: auto;
+  padding: 4rem 0rem;
+}
+
+.cards {
+  min-height: 60vh;
+  width: 80%;
+  margin: auto;
+  background-color: yellow;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cards .card {
+  background-color: maroon;
+  border: 1px solid black;
+  width: 25%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cards .card .image-container {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  background-color: #232127;
+  padding: 1rem;
+  top: -2.5rem;
+  left: 1rem;
+}
+
+.boost-link {
+  min-width: 100vw;
+  background-color: #2d2442;
+  background-image: url(../images/bg-boost-desktop.svg);
+  padding: 2rem;
+  color: white;
+}
+
+.boost-link .boost-container {
+  width: 50%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.boost-link .boost-container h2 {
+  padding-bottom: 2rem;
+}
+
+footer {
+  min-width: 100vw;
+  background-color: #35323e;
+}
+
+footer .footer-container {
+  padding: 3rem 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: auto;
+  color: white;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+footer .footer-container li {
+  font-size: 0.7rem;
+  margin: 0.5rem 0rem;
+}
+
+footer .footer-container li a {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+footer .footer-container li a:hover {
+  color: #2acfcf;
+}
+
+footer .footer-container .social {
+  width: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+}
+
+footer .footer-container .social svg path {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+footer .footer-container .social svg:hover path {
+  fill: #2acfcf;
+}
+
+footer .footer-container .logo svg path {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+footer .footer-container .logo svg path:hover {
+  fill: #2acfcf;
+}
+/*# sourceMappingURL=style.css.map */
