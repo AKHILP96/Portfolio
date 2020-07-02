@@ -21,6 +21,7 @@ html {
 body {
 	font-family: 'Poppins', sans-serif;
 	overflow-x: hidden;
+	position: relative;
 }
 
 a {
@@ -34,6 +35,10 @@ ul {
 
 h2 {
 	font-size: 2rem;
+}
+
+h4 {
+	font-size: 1.2rem;
 }
 
 h5 {
@@ -109,19 +114,90 @@ nav {
 
 .shorten-form {
 	min-width: 100vw;
-	min-height: 10vh;
+	min-height: 20vh;
 	background-image: linear-gradient(to bottom, white 50%, $secBack 50%);
+	display: flex;
+	justify-content: center;
 	.wrapper {
 		width: 80%;
+		padding: 2rem;
 		margin: auto;
-		background-color: $VeryDarkViolet;
-		form {
+		background-image: url('../images/bg-shorten-desktop.svg');
+		background-color: $DarkViolet;
+		.form-wrapper {
+			width: 90%;
+			margin: auto;
+			background-color: springgreen;
+			position: relative;
+			form {
+				display: flex;
+				justify-content: space-between;
+				margin: auto;
+				width: 100%;
+				input {
+					width: 75%;
+					border-radius: 5px;
+					border: 2px solid transparent;
+					padding: 1rem;
+					font-size: 1rem;
+				}
+				.error {
+					border: 2px solid $Red;
+				}
+				button {
+					width: 20%;
+					border-radius: 5px;
+					font-size: 1rem;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+			}
+		}
+	}
+}
+
+.error {
+	position: absolute;
+	bottom: -1.75rem;
+	font-style: italic;
+	color: $Red;
+	left: 0;
+}
+
+#error1 {
+	display: none;
+}
+
+#error2 {
+	display: none;
+}
+
+.generate-link {
+	width: 100vw;
+	background-color: $secBack;
+	padding: 2rem 0rem;
+	li {
+		width: 80%;
+		margin: 1rem auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0.7rem;
+		background-color: rgb(255, 255, 255);
+		border-radius: 10px;
+		.short {
+			color: $Cyan;
 			display: flex;
 			justify-content: space-between;
-			margin: auto;
-			width: 90%;
-			input {
-				width: 70%;
+			align-items: center;
+		}
+		button {
+			border-radius: 5px;
+			margin-left: 1rem;
+			padding: 0.5rem 1rem;
+			&:hover {
+				background-color: $DarkViolet;
 			}
 		}
 	}
@@ -136,37 +212,48 @@ nav {
 		width: 80%;
 		text-align: center;
 		margin: auto;
-		padding: 4rem 0rem;
+		padding: 8rem 0rem;
 	}
-}
-
-.cards {
-	min-height: 60vh;
-	width: 80%;
-	margin: auto;
-	background-color: yellow;
-	display: flex;
-	justify-content: space-between;
-	.card {
-		background-color: maroon;
-		border: 1px solid black;
-		width: 25%;
-		position: relative;
-		.image-container {
-			position: absolute;
+	padding-bottom: 10rem;
+	.cards {
+		min-height: 40vh;
+		width: 80%;
+		margin: auto;
+		display: flex;
+		justify-content: space-between;
+		.card {
+			background-color: white;
+			width: 30%;
+			position: relative;
+			padding: 0rem 2rem;
+			min-height: 30vh;
+			.image-container {
+				position: absolute;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 50%;
+				background-color: $VeryDarkViolet;
+				padding: 1rem;
+				top: -2.5rem;
+				left: 1rem;
+			}
+			p {
+				font-size: 0.7rem;
+				color: $GrayishViolet;
+			}
 			display: flex;
 			justify-content: center;
-			align-items: center;
-			border-radius: 50%;
-			background-color: $VeryDarkViolet;
-			padding: 1rem;
-			top: -2.5rem;
-			left: 1rem;
+			align-items: flex-start;
+			flex-direction: column;
 		}
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
+		.card2 {
+			transform: translateY(2rem);
+		}
+
+		.card3 {
+			transform: translateY(4rem);
+		}
 	}
 }
 
@@ -186,7 +273,24 @@ nav {
 		h2 {
 			padding-bottom: 2rem;
 		}
+		button {
+			font-size: 1.2rem;
+		}
 	}
+}
+
+.copied {
+	display: none;
+	color: white;
+	background-color: $Gray;
+	opacity: 0.3;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	position: absolute;
+	z-index: 5;
+	top: 0;
+	left: 0;
 }
 
 footer {
