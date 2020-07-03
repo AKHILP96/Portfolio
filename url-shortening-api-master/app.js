@@ -4,15 +4,19 @@ const copied = document.querySelector('.copied');
 
 form.addEventListener('submit', async (e) => {
 	e.preventDefault();
-	let input = e.target.querySelector('input').value;
+	let inputTag = e.target.querySelector('input');
+	let input = inputTag.value;
 	console.log(input);
 	if (input == '' || input == null) {
 		document.querySelector('#error1').style.display = 'inline-block';
 		document.querySelector('#error2').style.display = 'none';
+		inputTag.value = '';
+		inputTag.classList.add('inputerror');
 		return;
 	}
 	const regex = /^((https?|ftp|smtp):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/;
 	if (regex.test(input)) {
+		inputTag.classList.remove('inputerror');
 		document.querySelector('#error1').style.display = 'none';
 		document.querySelector('#error2').style.display = 'none';
 		let link = input;
@@ -39,13 +43,17 @@ form.addEventListener('submit', async (e) => {
 			// generate list
 		} catch (error) {
 			// generate error
+			inputTag.classList.add('inputerror');
 			document.querySelector('#error1').style.display = 'none';
 			document.querySelector('#error2').style.display = 'inline-block';
 		}
+		inputTag.value = '';
 	} else {
 		// generate error
+		inputTag.classList.add('inputerror');
 		document.querySelector('#error1').style.display = 'none';
 		document.querySelector('#error2').style.display = 'inline-block';
+		inputTag.value = '';
 	}
 });
 
@@ -67,5 +75,10 @@ links.addEventListener('click', (e) => {
 	copied.style.display = 'flex';
 	copied.style.justifyContent = 'center';
 	copied.style.alignItems = 'center';
-	copied.style.top = window.pageYOffset - document.documentElement.clientHeight / 2;
+	copied.style.top = window.pageYOffset + 'px';
+	document.querySelector('body').style.overflow = 'hidden';
+	setTimeout(() => {
+		document.querySelector('body').style.overflow = 'visible';
+		copied.style.display = 'none';
+	}, 1000);
 });

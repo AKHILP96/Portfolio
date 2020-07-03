@@ -15,7 +15,7 @@ $VeryDarkBlue: hsl(255, 11%, 22%);
 $VeryDarkViolet: hsl(260, 8%, 14%);
 
 html {
-	font-size: 18px;
+	font-size: 112.5%;
 }
 
 body {
@@ -94,6 +94,24 @@ nav {
 			color: $DarkViolet;
 		}
 	}
+	.burger {
+		display: none;
+		div {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+			width: 20%;
+			min-height: 100%;
+		}
+		.line {
+			content: '';
+			width: 100%;
+			height: 0.3rem;
+			border-radius: 5px;
+			background-color: $VeryDarkBlue;
+		}
+	}
 }
 
 .hero {
@@ -141,8 +159,11 @@ nav {
 					padding: 1rem;
 					font-size: 1rem;
 				}
-				.error {
+				.inputerror {
 					border: 2px solid $Red;
+					&::placeholder {
+						color: hsla(0, 87%, 67%, 0.678);
+					}
 				}
 				button {
 					width: 20%;
@@ -282,8 +303,8 @@ nav {
 .copied {
 	display: none;
 	color: white;
-	background-color: $Gray;
-	opacity: 0.3;
+	font-size: 4rem;
+	background-color: hsla(0, 0%, 49%, 0.685);
 	width: 100vw;
 	height: 100vh;
 	position: fixed;
@@ -291,6 +312,7 @@ nav {
 	z-index: 5;
 	top: 0;
 	left: 0;
+	transition: all 0.2s ease;
 }
 
 footer {
@@ -343,5 +365,100 @@ footer {
 		}
 
 		transition: all 0.2s ease;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	body {
+		overflow-x: hidden;
+	}
+
+	button {
+		width: 100%;
+	}
+	nav {
+		ul.left,
+		ul.right {
+			display: none;
+		}
+		.burger {
+			display: flex;
+			width: 100%;
+			justify-content: space-between;
+		}
+	}
+
+	.hero {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		h1 {
+			font-size: 2rem;
+			line-height: 3rem;
+		}
+	}
+
+	.form-wrapper {
+		form {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			input {
+				width: 80%;
+			}
+			button {
+				width: 80%;
+				background-color: black;
+				margin: auto;
+			}
+		}
+	}
+
+	.stats .cards {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		margin: auto;
+		.card {
+			width: 80%;
+		}
+	}
+
+	.boost-link {
+		width: 100%;
+		.boost-container {
+			width: 80%;
+			h2 {
+				font-size: 1rem;
+			}
+			button {
+				font-size: 0.7rem;
+				width: 100%;
+				padding: 0.5rem;
+			}
+		}
+	}
+
+	footer .footer-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 80%;
+		margin: auto;
+		text-align: center;
+		div {
+			width: 80%;
+			margin: 1rem auto;
+		}
+		div.social {
+			width: 80%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
 	}
 }

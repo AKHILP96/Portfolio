@@ -7,7 +7,7 @@
 }
 
 html {
-  font-size: 18px;
+  font-size: 112.5%;
 }
 
 body {
@@ -112,6 +112,36 @@ nav a:hover {
   color: #2d2442;
 }
 
+nav .burger {
+  display: none;
+}
+
+nav .burger div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20%;
+  min-height: 100%;
+}
+
+nav .burger .line {
+  content: '';
+  width: 100%;
+  height: 0.3rem;
+  border-radius: 5px;
+  background-color: #35323e;
+}
+
 .hero {
   width: 80%;
   margin: auto;
@@ -178,8 +208,24 @@ nav a:hover {
   font-size: 1rem;
 }
 
-.shorten-form .wrapper .form-wrapper form .error {
+.shorten-form .wrapper .form-wrapper form .inputerror {
   border: 2px solid #f46262;
+}
+
+.shorten-form .wrapper .form-wrapper form .inputerror::-webkit-input-placeholder {
+  color: rgba(244, 98, 98, 0.678);
+}
+
+.shorten-form .wrapper .form-wrapper form .inputerror:-ms-input-placeholder {
+  color: rgba(244, 98, 98, 0.678);
+}
+
+.shorten-form .wrapper .form-wrapper form .inputerror::-ms-input-placeholder {
+  color: rgba(244, 98, 98, 0.678);
+}
+
+.shorten-form .wrapper .form-wrapper form .inputerror::placeholder {
+  color: rgba(244, 98, 98, 0.678);
 }
 
 .shorten-form .wrapper .form-wrapper form button {
@@ -376,8 +422,8 @@ nav a:hover {
 .copied {
   display: none;
   color: white;
-  background-color: #bfbfbf;
-  opacity: 0.3;
+  font-size: 4rem;
+  background-color: rgba(125, 125, 125, 0.685);
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -385,6 +431,8 @@ nav a:hover {
   z-index: 5;
   top: 0;
   left: 0;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 footer {
@@ -448,5 +496,132 @@ footer .footer-container .logo svg path {
 
 footer .footer-container .logo svg path:hover {
   fill: #2acfcf;
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    overflow-x: hidden;
+  }
+  button {
+    width: 100%;
+  }
+  nav ul.left,
+  nav ul.right {
+    display: none;
+  }
+  nav .burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .hero {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+  .form-wrapper form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .form-wrapper form input {
+    width: 80%;
+  }
+  .form-wrapper form button {
+    width: 80%;
+    background-color: black;
+    margin: auto;
+  }
+  .stats .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    margin: auto;
+  }
+  .stats .cards .card {
+    width: 80%;
+  }
+  .boost-link {
+    width: 100%;
+  }
+  .boost-link .boost-container {
+    width: 80%;
+  }
+  .boost-link .boost-container h2 {
+    font-size: 1rem;
+  }
+  .boost-link .boost-container button {
+    font-size: 0.7rem;
+    width: 100%;
+    padding: 0.5rem;
+  }
+  footer .footer-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+  footer .footer-container div {
+    width: 80%;
+    margin: 1rem auto;
+  }
+  footer .footer-container div.social {
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 /*# sourceMappingURL=style.css.map */
