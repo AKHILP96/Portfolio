@@ -1,6 +1,16 @@
 const form = document.querySelector('form');
 const links = document.querySelector('.generate-link');
 const copied = document.querySelector('.copied');
+const burger = document.querySelector('.burger div');
+const lines = document.querySelectorAll('.line');
+const sidebar = document.querySelector('.sidebar');
+
+burger.addEventListener('click', () => {
+	lines[0].classList.toggle('cross');
+	lines[1].classList.toggle('cross');
+	lines[2].classList.toggle('cross');
+	sidebar.classList.toggle('show');
+});
 
 form.addEventListener('submit', async (e) => {
 	e.preventDefault();
