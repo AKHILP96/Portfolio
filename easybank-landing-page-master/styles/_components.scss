@@ -84,7 +84,6 @@ footer {
 		width: 100%;
 		max-width: 110rem;
 		margin: 0rem auto;
-		background-color: maroon;
 		justify-content: space-between;
 		height: 100%;
 		padding: 2rem 0rem;
@@ -100,7 +99,6 @@ footer {
 			align-items: flex-start;
 			width: 60%;
 			min-height: 100%;
-			background-color: mediumaquamarine;
 			display: flex;
 			justify-content: space-between;
 			@media only screen and (max-width: $bp-mobile) {
@@ -113,7 +111,6 @@ footer {
 			display: flex;
 			flex-direction: column;
 			height: 100%;
-			background-color: mediumblue;
 			justify-content: space-between;
 			@media only screen and (max-width: $bp-mobile) {
 				text-align: center;
@@ -130,7 +127,6 @@ footer {
 			display: flex;
 			justify-content: space-between;
 			flex-direction: column;
-			background-color: black;
 		}
 		&__social {
 			display: flex;
@@ -146,12 +142,10 @@ footer {
 			align-items: flex-end;
 			justify-content: space-between;
 			flex-direction: column;
-			background-color: yellow;
 			padding: 2rem 0rem;
 			@media only screen and (max-width: $bp-mobile) {
-				text-align: center;
-				justify-content: center;
 				align-items: center;
+				height: 100px;
 			}
 		}
 	}

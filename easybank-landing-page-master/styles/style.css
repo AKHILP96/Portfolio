@@ -79,10 +79,11 @@ a:visited {
 }
 
 .t-h2 {
-  font-weight: var(--weight-bold);
+  font-weight: var(--weight-regular);
   font-size: 3.2rem;
   letter-spacing: -1.43px;
   line-height: 1;
+  color: var(--color--DarkBlue);
 }
 
 .t-h3 {
@@ -93,8 +94,8 @@ a:visited {
 }
 
 .t-h4 {
-  font-weight: var(--weight-bold);
-  font-size: 2rem;
+  font-weight: var(--weight-regular);
+  font-size: 2.5rem;
   letter-spacing: -0.89px;
   line-height: 1.4;
 }
@@ -107,6 +108,17 @@ a:visited {
   width: 70%;
   color: var(--color--GrayishBlue);
   padding-bottom: 2.5rem;
+}
+
+.t-body2 {
+  color: var(--color--GrayishBlue);
+  padding: 2rem 0rem;
+}
+
+.t-body3 {
+  color: var(--color--GrayishBlue);
+  line-height: 2.5rem;
+  font-weight: var(--weight-regular);
 }
 
 .t-body6 {
@@ -287,7 +299,6 @@ footer .container {
   width: 100%;
   max-width: 110rem;
   margin: 0rem auto;
-  background-color: maroon;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -319,7 +330,6 @@ footer .footer__container {
           align-items: flex-start;
   width: 60%;
   min-height: 100%;
-  background-color: mediumaquamarine;
   display: flex;
   justify-content: space-between;
 }
@@ -348,7 +358,6 @@ footer .footer__items {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100%;
-  background-color: mediumblue;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -382,7 +391,6 @@ footer .footer__header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: black;
 }
 
 footer .footer__social {
@@ -418,30 +426,123 @@ footer .footer__request {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: yellow;
   padding: 2rem 0rem;
 }
 
 @media only screen and (max-width: 440px) {
   footer .footer__request {
-    text-align: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    height: 100px;
   }
 }
 
 .reason {
   width: 100%;
-  background-color: blanchedalmond;
+  background-color: var(--color--LightGrayishBlue);
+  position: relative;
+  z-index: -2;
 }
 
 .reason .container {
   width: 100%;
   max-width: 110rem;
   margin: 0 auto;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20rem;
+          flex: 1 1 20rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10rem 0rem;
+}
+
+.reason__main__copy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 140%;
+  max-width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.reason__card {
+  width: 250px;
+  min-width: 250px;
+  min-height: 100%;
+}
+
+.reason__card__image {
+  padding: 1rem 0rem;
+}
+
+.reason__card__header {
+  padding: 1rem 0rem;
+}
+
+@media only screen and (max-width: 440px) {
+  .reason__card {
+    text-align: center;
+  }
+}
+
+.articles {
+  width: 100%;
+}
+
+.articles .container {
+  width: 100%;
+  max-width: 110rem;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: turquoise;
+}
+
+.articles .article__main {
+  width: 100%;
+}
+
+.articles .article__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: tomato;
+}
+
+.articles .article__card {
+  width: 250px;
+  min-width: 250px;
+  min-height: 100%;
+}
+
+.articles .article__card img {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
