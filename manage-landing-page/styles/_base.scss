@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700&display=swap');
+
+:root {
+	//colors
+	--color--BrightRed: hsl(12, 88%, 59%);
+	--color--DarkBlue: hsl(228, 39%, 23%);
+	--color--DarkGrayishBlue: hsl(227, 12%, 61%);
+	--color--VeryDarkBlue: hsl(233, 12%, 13%);
+	--color--VeryPaleRed: hsl(13, 100%, 96%);
+	--color--VaryLightGray: hsl(0, 0%, 98%);
+	--color-White: rgb(255, 255, 255);
+
+	//typography
+	--font-family: 'Be Vietnam', sans-serif;
+
+	//font weights
+	--weight-ligth: 400;
+	--weight-regular: 500;
+	--weight-bold: 700;
+
+	//spacing:
+	--space-s: 12rem;
+	--space-m: 16rem;
+	--space-l: 20rem;
+	--space-max-width: 111rem;
+
+	// Design elements
+	--transition: 300ms ease-in-out;
+}
+
+//reset
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	font-family: var(--font-family);
+	font-size: 1.5rem;
+	background-color: var(--color-white);
+	color: var(--color--DarkBlue);
+	overflow-x: hidden;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+	margin: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+// Breakpoints
+$bp-small: 32em;
+$bp-medium: 48em;
+$bp-large: 64em;
+
+// Media Queries
+$mq-small: "(min-width: #{$bp-small})";
+$mq-medium: "(min-width: #{$bp-medium})";
+$mq-large: "(min-width: #{$bp-large})";
+
+.t-h1 {
+	font-family: var(--font-family);
+	font-weight: var(--weight-bold);
+	line-height: 1;
+	font-size: 4rem;
+	letter-spacing: -1.79px;
+	@media #{$mq-small} {
+		font-size: 5.6rem;
+		letter-spacing: -2.5px;
+	}
+}
+
+t-h2 {
+	font-family: var(--font-family);
+	font-weight: var(--weight-bold);
+	font-size: 3.2rem;
+	letter-spacing: -1.43px;
+	line-height: 1;
+	@media #{$mq-small} {
+		font-size: 4.8rem;
+		letter-spacing: -2.14px;
+	}
+}
+
+.t-h3 {
+	font-family: var(--font-family-mono);
+	font-weight: var(--weight-bold);
+	font-size: 2.4rem;
+	letter-spacing: -1.07px;
+	line-height: 28px;
+	@media #{$mq-small} {
+		font-size: 4rem;
+		letter-spacing: -1.79px;
+		line-height: 1.2;
+	}
+}
+
+.t-body1 {
+	font-family: var(--font-family-sans);
+	font-weight: var(--weight-regular);
+	font-size: 1.5rem;
+	letter-spacing: 0px;
+	line-height: 2.5rem;
+}
+
+.t-navy {
+	color: var(--color--DarkBlue);
+}
+
+.t-link {
+	font-family: var(--font-family-mono);
+	font-weight: var(--weight-bold);
+	font-size: 1.5rem;
+	letter-spacing: 0px;
+	line-height: 1.167;
+	text-decoration: none;
+	color: var(--color--DarkBlue);
+	transition: var(--transition) color;
+	&--sidebar {
+		font-size: 1.8rem;
+		line-height: 1.389;
+		color: var(--color--DarkGrayishBlue);
+	}
+	&--footer {
+		line-height: 25px;
+	}
+	&:hover,
+	&:focus {
+		color: var(--color--DarkGrayishBlue);
+		outline: none;
+	}
+}
+
+// Button
+.btn {
+	text-decoration: none;
+	border: none;
+	cursor: pointer;
+	font-weight: var(--weight-bold);
+	font-family: var(--font-family-mono);
+	font-size: 1.5rem;
+	line-height: 1.667;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&-regular {
+		height: 5.3rem;
+		width: 18rem;
+	}
+
+	&-m {
+		height: 5.3rem;
+		width: 19.2rem;
+	}
+	&-l {
+		height: 5.3rem;
+		width: 19.5rem;
+	}
+}
+.btn-orange {
+	background-color: var(--color--BrightRed);
+	border: 3px solid transparent;
+	color: var(--color-White);
+	transition: var(--transition) background-color, var(--transition) border-color, var(--transition) color;
+	&:hover,
+	&:focus {
+		outline: none;
+		color: var(--color-BrightRed);
+		background-color: transparent;
+		border-color: var(--color-BrightRed);
+	}
+}
+
+// screen reader only
+.screen-reader-only {
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	position: absolute;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(0px 0px 99.9% 99.9%);
+	overflow: hidden;
+	border: 0;
+}
+
+//logo
+.brand {
+	margin: auto;
+	padding: 0;
+}

@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+
+:root {
+	//colors
+	--color--DarkBlue: hsl(233, 26%, 24%);
+	--color--LimeGreen: hsl(136, 65%, 51%);
+	--color--BrightCyan: hsl(192, 70%, 51%);
+	--color--GrayishBlue: hsl(233, 8%, 62%);
+	--color--LightGrayishBlue: hsl(220, 16%, 96%);
+	--color--VeryLightGray: hsl(0, 0%, 98%);
+	--color--White: hsl(0, 0%, 100%);
+
+	//typography
+	--font-family: 'Public Sans', sans-serif;
+	--weight-bold: 700;
+	--weight-regular: 400;
+	--weight-light: 300;
+
+	//animations
+	--transiton: all 0.2s ease;
+}
+
+$bp-mobile: 440px;
+$bp-tablet: 568px;
+
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	font-family: var(--font-family);
+	margin: 0;
+	font-size: 1.6rem;
+	background-color: var(--color--White);
+	overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+a {
+	text-decoration: none;
+	font-size: 1.5rem;
+	font-weight: var(--weight-bold);
+	color: var(--color--GrayishBlue);
+	&:visited {
+		text-decoration: none;
+		color: var(--color--GrayishBlue);
+	}
+	background-color: salmon;
+}
+
+.t-h1 {
+	font-weight: var(--weight-regular);
+	color: var(--color--DarkBlue);
+	font-size: 4.8rem;
+	line-height: 1.15;
+	letter-spacing: 1;
+	padding-bottom: 2rem;
+}
+
+.t-h2 {
+	font-weight: var(--weight-bold);
+	font-size: 3.2rem;
+	letter-spacing: -1.43px;
+	line-height: 1;
+}
+
+.t-h3 {
+	font-weight: var(--weight-bold);
+	font-size: 2.4rem;
+	letter-spacing: -1.07px;
+	line-height: 28px;
+}
+
+.t-h4 {
+	font-weight: var(--weight-bold);
+	font-size: 2rem;
+	letter-spacing: -0.89px;
+	line-height: 1.4;
+}
+
+.t-body1 {
+	font-weight: var(--weight-regular);
+	font-size: 1.5rem;
+	letter-spacing: 0px;
+	line-height: 2.5rem;
+	width: 70%;
+	color: var(--color--GrayishBlue);
+	padding-bottom: 2.5rem;
+}
+
+.t-body6 {
+	color: white;
+	font-size: 1.5rem;
+	@media only screen and (max-width: $bp-tablet) {
+		font-size: 1.15rem;
+	}
+	@media only screen and (max-width: $bp-mobile) {
+		font-size: 1rem;
+	}
+}
+
+//button
+.btn {
+	text-decoration: none;
+	border: none;
+	cursor: pointer;
+	font-weight: var(--weight-bold);
+	font-size: 1.5rem;
+	line-height: 1.667;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	padding: 0.5rem 1rem;
+	display: inline-block;
+	border-radius: 50px;
+}
+
+.btn-mobile {
+	background-color: transparent;
+	border: 1px solid white;
+}
+
+.btn-green {
+	background-image: linear-gradient(to right, hsl(136, 58%, 62%), hsl(192, 66%, 63%));
+}
+
+.screen-reader-only {
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	position: absolute;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(0px 0px 99.9% 99.9%);
+	overflow: hidden;
+	border: 0;
+}
