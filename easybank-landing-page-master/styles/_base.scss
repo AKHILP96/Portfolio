@@ -101,9 +101,16 @@ a {
 
 .t-h4 {
 	font-weight: var(--weight-regular);
-	font-size: 2.5rem;
+	font-size: 2rem;
 	letter-spacing: -0.89px;
-	line-height: 1.4;
+	line-height: 1;
+	padding: 2rem 0rem;
+}
+
+.t-h6 {
+	font-weight: var(--weight-bold);
+	font-size: 1.25rem;
+	color: var(--color--LightGrayishBlue);
 }
 
 .t-body1 {
@@ -125,6 +132,10 @@ a {
 	color: var(--color--GrayishBlue);
 	line-height: 2.5rem;
 	font-weight: var(--weight-regular);
+}
+
+.t-body4 {
+	font-size: 1.35rem;
 }
 
 .t-body6 {
